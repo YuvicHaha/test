@@ -31,6 +31,11 @@ app.get("/status/:key", (req, res) => {
   }
 });
 
+// ✅ Add this route for UptimeRobot
+app.get("/ping", (req, res) => {
+  res.status(200).send("pong");
+});
+
 app.listen(3000, () => {
   console.log("Backend listening on port 3000");
 });
